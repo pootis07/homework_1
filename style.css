@@ -1,0 +1,221 @@
+
+/* ===== GENERAL STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff8ef;
+  color: #38251d;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+.hero {
+  background: linear-gradient(135deg, #9e351e, #ed9144);
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 9px 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #9e351e;
+}
+
+/* ===== FORM BUTTON ON MAIN PAGE ===== */
+.form-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #fff8ef;
+  color: #9e351e;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  background-color: #38251d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1000px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+/* ===== RECIPE CARDS ===== */
+.recipe {
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  box-shadow: 0 5px 20px rgba(70, 40, 20, 0.10);
+}
+
+.recipe img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.recipe-content {
+  padding: 25px 35px 35px;
+}
+
+.recipe h2 {
+  color: #b84925;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.recipe h3 {
+  color: #794329;
+  border-bottom: 2px solid #f2d5b8;
+  padding-bottom: 6px;
+  margin-top: 25px;
+}
+
+.description {
+  color: #805e4d;
+  font-style: italic;
+}
+
+.recipe li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.recipe li::marker {
+  color: #d86c35;
+}
+
+/* ===== FORM PAGE ===== */
+.form-card {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-card label {
+  font-weight: bold;
+  margin-top: 12px;
+  color: #794329;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfc6b4;
+  border-radius: 8px;
+  font: inherit;
+  background-color: #fffdf9;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: 2px solid #ed9144;
+  border-color: transparent;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn {
+  margin-top: 18px;
+  padding: 13px;
+  border: none;
+  border-radius: 25px;
+  background-color: #b84925;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #38251d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #38251d;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+footer p {
+  margin: 4px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 0 12px;
+    margin: 20px auto;
+  }
+
+  .recipe img {
+    height: 230px;
+  }
+
+  .recipe-content {
+    padding: 20px;
+  }
+
+  .recipe h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooking Club - Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>📝 Fill This Form</h1>
+    <p>We would love to hear from you!</p>
+    <nav>
+      <a href="index.html">← Back to Cooking Club</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="recipe form-card">
+      <div class="recipe-content">
+        <form action="#" method="get">
+
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name"
+                 placeholder="Enter your name" required>
+
+          <label for="age">Your age</label>
+          <input type="number" id="age" name="age"
+                 min="1" max="120" placeholder="Enter your age" required>
+
+          <label for="complaint">Your complaint or feedback</label>
+          <textarea id="complaint" name="complaint"
+                    rows="5" placeholder="Tell us what you think..."
+                    required></textarea>
+
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email"
+                 placeholder="you@example.com" required>
+
+          <button type="submit" class="submit-btn">
+            Submit Form ❤️
+          </button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Cooking Club</p>
+    <p>Good food brings people together!</p>
+  </footer>
+
+</body>
+</html>

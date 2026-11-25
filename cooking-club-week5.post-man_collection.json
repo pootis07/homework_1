@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "7a1de8de-37f2-4c02-917e-1d68aa5b63f7",
+    "name": "Cooking Club Week 5 API",
+    "description": "Week 5 team project collection. Start the Express server on port 3000 before sending requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "tipId", "value": "1" },
+    { "key": "missingTipId", "value": "99" }
+  ],
+  "item": [
+    {
+      "name": "GET all tips (200)",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/tips" }
+    },
+    {
+      "name": "GET one tip (200)",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/tips/{{tipId}}" }
+    },
+    {
+      "name": "GET missing tip (404)",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/tips/{{missingTipId}}" }
+    },
+    {
+      "name": "POST new tip (201)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"text\": \"Let cooked food rest before serving.\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/api/tips"
+      }
+    },
+    {
+      "name": "POST empty body (400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/api/tips"
+      }
+    },
+    {
+      "name": "PUT update tip (200)",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"text\": \"Read the full recipe and prepare ingredients first.\"\n}", "options": { "raw": { "language": "json" } } },
+        "url": "{{baseUrl}}/api/tips/{{tipId}}"
+      }
+    },
+    {
+      "name": "DELETE tip (204)",
+      "request": { "method": "DELETE", "header": [], "url": "{{baseUrl}}/api/tips/{{tipId}}" }
+    }
+  ]
+}
